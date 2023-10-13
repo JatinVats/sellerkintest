@@ -1,0 +1,121 @@
+.dashboard main .top h2 {
+  margin: 0.25em 0 0.25em 1.25em;
+  color: white;
+  font-weight: 500;
+}
+.dashboard main .content {
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard main .content .column-1,
+.dashboard main .content .column-2 {
+  width: 49%;
+}
+.dashboard main .content .column-1 > div,
+.dashboard main .content .column-2 > div {
+  width: 100%;
+  background-color: white;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 6px;
+  padding: 3em 2em;
+  margin: 1em 0;
+}
+.dashboard main .content .column-1 > div h4,
+.dashboard main .content .column-2 > div h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.dashboard main .content .column-1 > div:nth-child(1) p,
+.dashboard main .content .column-2 > div:nth-child(1) p {
+  width: 75%;
+  font-size: 0.85rem;
+  text-align: left;
+  margin: 1em 0 2em 0;
+}
+.dashboard main .content .column-1 > div:nth-child(1) button,
+.dashboard main .content .column-2 > div:nth-child(1) button {
+  font-size: 1rem;
+  padding: 0.75em 2em;
+  border-radius: 8px;
+  border: none;
+  background-color: #5c00cd;
+}
+.dashboard main .content .column-1 > div:nth-child(1) button a,
+.dashboard main .content .column-2 > div:nth-child(1) button a {
+  text-decoration: none;
+  color: white;
+}
+.dashboard main .content .column-1 > div:nth-child(1) button:hover,
+.dashboard main .content .column-2 > div:nth-child(1) button:hover {
+  background-color: #6a00ec;
+}
+.dashboard main .content .column-2 > div {
+  width: 100%;
+  padding-left: 3em;
+}
+.dashboard main .content .column-2 > div h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.dashboard main .content .column-2 > div ul {
+  margin-bottom: 0;
+}
+.dashboard main .content .column-2 > div ul li {
+  list-style: disc;
+  list-style-position: inside;
+  font-size: 0.85rem;
+  text-align: left;
+  margin: 1em 0 0em 0;
+}
+.dashboard main .content .column-2 > div ul li p:nth-child(1) {
+  margin: 0;
+}
+.dashboard main .content .column-2 > div ul li p:nth-child(2) {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+  opacity: 0.75;
+}
+.dashboard main div.credits-wrapper {
+  width: 47.5%;
+}
+.dashboard main div.credits-wrapper h4 {
+  white-space: nowrap;
+}
+.dashboard main div.credits-wrapper > div div:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+.dashboard main div.credits-wrapper > div div:nth-child(1) h4 {
+  margin: 0;
+}
+.dashboard main div.credits-wrapper > div div:nth-child(1) p {
+  margin: 0;
+  margin-left: 0.5em;
+}
+.dashboard main div.credits-wrapper > div div:nth-child(2) {
+  margin: 0.5em 0 0 0;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+.dashboard main div.credits-wrapper > div div:nth-child(2) .progress-bar {
+  width: 50%;
+  height: 16px;
+  background-color: #c8c8c8;
+  margin-left: 0.5em;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.dashboard main div.credits-wrapper > div div:nth-child(2) .progress-bar div {
+  height: 100%;
+  background-color: rgb(3, 64, 148);
+  border-radius: 16px;
+}
+.dashboard main div.credits-wrapper svg {
+  height: 1em;
+  cursor: pointer;
+}/*# sourceMappingURL=dashboard.css.map */

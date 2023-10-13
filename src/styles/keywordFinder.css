@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+#tableHeading{
+  font-size: 28px;
+  font-weight: 500;
+}
+#paginationButtonPrev{
+  border: none;
+  background: transparent;
+}
+#paginationButtonNext{
+  border: none;
+  background: transparent;
+}
+
+.tableData{
+  border-radius: 20px;
+}
+
+
+.keyword-finder #header-1,
+.keyword-finder #header-2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2em;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.keyword-finder #header-1 .title,
+.keyword-finder #header-2 .title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.keyword-finder #header-1 .title h2,
+.keyword-finder #header-2 .title h2 {
+  display: flex;
+  align-items: center;
+  padding: 0 1.5vw;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.keyword-finder #header-1 .title h2 p,
+.keyword-finder #header-2 .title h2 p {
+  font-size: 1.25rem;
+  margin: 0 0.5em 0 0;
+}
+.keyword-finder #header-1 .title span,
+.keyword-finder #header-2 .title span {
+  margin-bottom: 0.25em;
+}
+.keyword-finder #header-1 svg,
+.keyword-finder #header-2 svg {
+  cursor: pointer;
+}
+.keyword-finder #header-1 svg:nth-child(2),
+.keyword-finder #header-2 svg:nth-child(2) {
+  margin-left: 1em;
+}
+.keyword-finder section.listings {
+  display: block;
+}
+.keyword-finder section.listings h6 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 2em 0 1em 0;
+}
+
+.table-wrapper {
+  display: block;
+  width: 100%;
+  padding: 0 1.5vw;
+  margin: 2em 0 16vh 0;
+}
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 12px;
+}
+.table-wrapper table tr {
+  border-top: 1px solid #cfcfcf;
+  font-size: 0.9rem;
+}
+.table-wrapper table tr th,
+.table-wrapper table tr td {
+  text-align: left;
+  padding: 1.5em 0 1.5em 2em;
+}
+.table-wrapper table tr th {
+  text-transform: capitalize;
+  opacity: 0.6;
+  font-weight: 600;
+}
+.table-wrapper table tr td.product-title-wrapper a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.table-wrapper table tr td.product-title-wrapper a div:has(img) {
+  width: 10vh;
+  height: 10vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-right: 1em;
+}
+.table-wrapper table tr td.product-title-wrapper a div:has(img) img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 6px;
+}
+.table-wrapper table thead tr {
+  border: none;
+  background-color: rgb(222, 222, 222);
+}
+.table-wrapper table thead tr th:nth-child(1) {
+  border-radius: 12px 0 0 0;
+}
+.table-wrapper table thead tr th:last-child {
+  border-radius: 0 12px 0 0;
+}
+.table-wrapper table thead tr th {
+  padding-block: 1.25em;
+  cursor: pointer;
+}
+.table-wrapper table thead tr th > div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.table-wrapper table thead tr th > div .sort-icon {
+  position: relative;
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-left: 1em;
+}
+.table-wrapper table thead tr th > div .sort-icon .triangle-up,
+.table-wrapper table thead tr th > div .sort-icon .triangle-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 0.4em solid transparent;
+  border-right: 0.4em solid transparent;
+}
+.table-wrapper table thead tr th > div .sort-icon .triangle-up {
+  border-bottom: 0.4em solid #000; /* Change color as needed */
+}
+.table-wrapper table thead tr th > div .sort-icon .triangle-down {
+  top: 0.6em;
+  border-top: 0.4em solid #000; /* Change color 
+as needed */
+}/*# sourceMappingURL=keywordFinder.css.map */

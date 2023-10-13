@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.landing-body {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+}
+.landing-body* {
+  box-sizing: border-box;
+}
+.landing-body .box {
+  z-index: 2;
+  position: absolute;
+  border-radius: 25px;
+}
+.landing-body .box-1 {
+  height: 30vw;
+  width: 30vw;
+  background-color: #edf0e8;
+  transform: translate(-50%, 60%) rotateZ(45deg);
+}
+.landing-body .box-2 {
+  height: 30vw;
+  width: 30vw;
+  background-color: #e3e6ff;
+  right: 0;
+  transform: translate(50%, 25%) rotateZ(45deg);
+}
+.landing-body .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.landing-body .name img {
+  margin-right: 0.5em;
+  height: 4vh;
+}
+.landing-body .nav {
+  padding: 0 3vw;
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landing-body .nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.landing-body .nav ul li {
+  cursor: pointer;
+  margin-left: 1.5em;
+  padding: 0.75em 1.25em;
+  border-radius: 6px;
+  list-style: none;
+}
+.landing-body .nav ul li a {
+  text-decoration: none;
+}
+.landing-body .nav ul li#dashboard-link {
+  background-color: #084fb8;
+}
+.landing-body .nav ul li#dashboard-link a {
+  color: white;
+}
+.landing-body .nav ul li:hover {
+  color: rgb(21, 21, 203);
+}
+.landing-body .content {
+  height: 88vh;
+  width: 100%;
+  padding: 0 3vw;
+  display: flex;
+  justify-content: space-between;
+}
+.landing-body .content .left {
+  position: relative;
+  width: 52.5%;
+  z-index: 3;
+}
+.landing-body .content .left h1 {
+  margin: 0;
+  margin-top: 0.75em;
+  font-size: 3.25rem;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+.landing-body .content .left p.desc {
+  font-size: 1.1rem;
+  margin: 1.5em 0;
+  width: 80%;
+}
+.landing-body .content .left .buttons {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  align-items: center;
+}
+.landing-body .content .left .buttons button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1em 1.75em;
+  border: none;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+}
+.landing-body .content .left .buttons a {
+  text-decoration: none;
+}
+.landing-body .content .left .buttons p {
+  font-weight: 600;
+}
+.landing-body .content .left .buttons .left-btn button {
+  color: white;
+  background-color: #084fb8;
+}
+.landing-body .content .left .buttons .right-btn {
+  margin-left: 2em;
+}
+.landing-body .content .left .buttons .right-btn button {
+  background-color: transparent;
+  border: 1px solid gray;
+}
+.landing-body .content .right {
+  position: relative;
+  z-index: 3;
+  height: 98%;
+  width: 35%;
+  background-color: #011955;
+  border-radius: 6px;
+}
+.landing-body .content .right img {
+  height: 90%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(-35%, 0%);
+}/*# sourceMappingURL=landing.css.map */

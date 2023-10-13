@@ -1,0 +1,122 @@
+.dropdown-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  // width: 100%;
+  padding: 0.4em 0.5em;
+  border: none;
+  border: 1px solid #9e9e9e;
+  border-radius: 6px;
+}
+
+.dropdown {
+  //   margin-right: 20px;
+  //   margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.level0-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0.5em;
+  width: fit-content;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  max-height: 50vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dropdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: fit-content;
+  //   height: 30px;
+  padding: 5px;
+  //   border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  & > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    .arrow-icon {
+      margin-right: 0.5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        width: 1em;
+      }
+    }
+    p {
+      width: fit-content;
+    }
+  }
+  p {
+    text-align: left;
+    margin: 0.25em 0;
+    white-space: nowrap;
+    &:hover {
+      color: #868686;
+    }
+  }
+}
+
+.arrow-icon {
+  margin-left: auto;
+}
+
+.level1-dropdown {
+  //   position: absolute;
+  top: 100%;
+  left: 0;
+  width: fit-content;
+  //   border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  //   align-items: flex-start;
+  z-index: 1;
+  div {
+    // background-color: blue;
+  }
+}
+
+.level1-item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #f0f0f0;
+}
+
+/* Hide the level1 dropdown initially */
+.level1-dropdown {
+  //   display: none;
+}
+
+/* Show the level1 dropdown when the corresponding level0 item is selected */
+.dropdown-item.selected + .level1-dropdown {
+  display: block;
+}
+
+/* Style the level0 dropdown content */
+.level0-dropdown-content {
+  //   display: none;
+}
+
+/* Show the level0 dropdown content when the dropdown is toggled */
+.level0-dropdown.show .level0-dropdown-content {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,60 @@
+product finder algorithm:
+
+- first, decide on what factors (properties) to consider in order to rank each product.
+
+- once we do that, we can assign initial weights to each property, preferably different weights with more important properties having higher weights.
+for eg: we can store weights for each property like this (better to have sum of all weights = 1).
+
+const weights = {
+  sales: 0.0833,
+  creation_timestamp: 0.08,
+  last_modified_timestamp: 0.08,
+  quantity: 0.027,
+  featured_rank: 0.067,
+  num_favorers: 0.033,
+  non_taxable: 0.033,
+  is_customizable: 0.008,
+  is_personalizable: 0.013,
+  is_private: 0.001,
+  ratingAndReview: 0.01,
+  views: 0.003,
+  price: 0.009
+};
+
+- since, difference between the order of values of different properties can be big, we normalize the dataset to obtain a fair scale of comparison.
+an algorithm like min-max scaling can be used:
+
+function minMaxScaling(products, property) {
+  // Find the minimum and maximum values for the specified property
+  const values = products.map((product) => product[property]);
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+
+  // Update the property values in the products array with normalized values
+  products.forEach((product) => {
+    product[property] = (product[property] - min) / (max - min);
+  });
+}
+
+// Usage example
+const products = [
+  { id: 1, price: 542, rating: 4.5, sales: 100 },
+  { id: 2, price: 299, rating: 3.2, sales: 200 },
+  { id: 3, price: 3120, rating: 3.8, sales: 287 },
+  { id: 4, price: 36, rating: 4.2, sales: 1937 },
+  { id: 5, price: 18999, rating: 4.6, sales: 45 },
+  // ... other product objects
+];
+
+minMaxScaling(products, 'price');
+minMaxScaling(products, 'rating');
+minMaxScaling(products, 'sales');
+
+the product array will now contain normalized values of all properties
+
+
+- multiply numeric data directly with the weights, multiply weight (small) of boolean properties with 1 if true else 0, design a smaller sub-algorithm to assign numeric values to other non-numeric properties and then multiply.
+
+- add all these values which be the score of the listing. we will sort the listings based on these score and show the top 'n' listings to the user.
+
+- if the user wants to give more importance to a certain property, increase it's weight and adjust others' if required and then run the algorithm.

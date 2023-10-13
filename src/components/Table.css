@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+table {
+    border-collapse: separate;
+    font-family: "Poppins", sans-serif;
+    border-spacing: 0 13px;
+    width: 90%;
+    margin: 20px auto;
+   
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 28px 24px;
+    
+  }
+
+
+  
+  th, td {
+    
+    border-radius: 3px;
+    padding: 12px;
+    text-align: center;
+  }
+
+  th {
+    font-weight: 600;
+    width: 200px;
+    border-spacing: 0 0px;
+    
+    background-color: #ffffff;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #fffafa94;
+  }
+
+  td:first-child {
+    font-weight: 550;
+    text-align: left;
+   
+  }
+
+  td:last-child {
+    font-weight: normal;
+  }
+
+  td{
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Make sure to add a more specific selector for the table's border-radius */

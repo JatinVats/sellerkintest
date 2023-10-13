@@ -1,0 +1,11 @@
+{
+  "name": "Sellerkin",
+  "version": "0.0.0.1",
+  "description": "Keywords and products insight",
+  "manifest_version": 3,
+  "author": "Prajwal Dhule",
+  "permissions": ["https://sellerkintempbe.onrender.com/*"],
+  "action": {
+    "default_popup": "index.html"
+  }
+}

@@ -1,0 +1,141 @@
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.signup-body,
+.login-body {
+  background-color: #f8f8f8;
+  height: 100vh;
+  width: 100vw;
+}
+.signup-body #home-link,
+.login-body #home-link {
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  text-decoration: none;
+}
+.signup-body form,
+.login-body form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 3.5em 2em;
+  color: black;
+  outline: none;
+  border: none;
+}
+.signup-body form h2,
+.login-body form h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+.signup-body form p,
+.login-body form p {
+  font-size: 0.9rem;
+  color: rgb(72, 72, 72);
+  text-align: center;
+}
+.signup-body form h2 + p,
+.login-body form h2 + p {
+  margin: 0.5em 0 1.25em 0;
+}
+.signup-body label,
+.login-body label {
+  display: block;
+  font-weight: 500;
+  margin-top: 1em;
+}
+.signup-body input,
+.login-body input {
+  display: block;
+  width: 28vw;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(193, 193, 193);
+  border-radius: 3px;
+  padding: 0.75em 1em 0.75em 1em;
+  margin-top: 0.5em;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.signup-body input:focus,
+.login-body input:focus {
+  outline: none;
+}
+.signup-body #forgot-password-link,
+.login-body #forgot-password-link {
+  font-size: 0.9rem;
+  margin-top: 0.5em;
+  color: black;
+}
+.signup-body ::-moz-placeholder, .login-body ::-moz-placeholder {
+  color: gray;
+}
+.signup-body ::placeholder,
+.login-body ::placeholder {
+  color: gray;
+}
+.signup-body button,
+.login-body button {
+  align-self: center;
+  width: 30vw;
+  background-color: blue;
+  color: white;
+  margin-top: 2em;
+  margin-inline: auto;
+  padding: 0.75em 1em 0.75em 1em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.signup-body .signup-option,
+.login-body .signup-option {
+  text-align: center;
+  margin-top: 1em;
+}
+.signup-body .social,
+.login-body .social {
+  margin-top: 30px;
+  display: flex;
+}
+.signup-body .social div,
+.login-body .social div {
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  text-align: center;
+}
+.signup-body .social div:hover,
+.login-body .social div:hover {
+  background-color: rgb(255, 255, 255);
+}
+.signup-body .social .fb,
+.login-body .social .fb {
+  margin-left: 25px;
+}
+.signup-body .social i,
+.login-body .social i {
+  margin-right: 4px;
+}/*# sourceMappingURL=login.css.map */

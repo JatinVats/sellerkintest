@@ -1,0 +1,45 @@
+html .shop-analyzer {
+  display: flex;
+  position: relative;
+}
+html .shop-analyzer main > div .content .primary-content h4 {
+  width: 29%;
+}
+html .shop-analyzer main .title {
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 16px;
+  padding: 2em 1.5vw 1em 1.5vw;
+}
+html .shop-analyzer main .title span {
+  margin-right: 1em;
+  border: 1px solid rgb(158, 158, 158);
+  height: 4em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html .shop-analyzer main .title span img {
+  height: 100%;
+  border-radius: 50%;
+}
+html .shop-analyzer main .title > div h2 {
+  margin: 0;
+  padding: 0;
+}
+html .shop-analyzer main .title > div div {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+html .shop-analyzer main .title > div div img {
+  height: 1em;
+  margin-left: 0.25em;
+}/*# sourceMappingURL=shopAnalyzer.css.map */

@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@mixin flex($jc) {
+  display: flex;
+  justify-content: $jc;
+  align-items: center;
+}
+
+@mixin grid1() {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(25px, auto);
+}
+
+.landing-body {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  //   font-family: "Poppins";
+  font-family: "Montserrat", sans-serif;
+  &* {
+    box-sizing: border-box;
+  }
+
+  .box {
+    z-index: 2;
+    position: absolute;
+
+    border-radius: 25px;
+  }
+  .box-1 {
+    height: 30vw;
+    width: 30vw;
+    background-color: #edf0e8;
+    transform: translate(-50%, 60%) rotateZ(45deg);
+  }
+  .box-2 {
+    height: 30vw;
+    width: 30vw;
+    background-color: #e3e6ff;
+    right: 0;
+    transform: translate(50%, 25%) rotateZ(45deg);
+  }
+  .name {
+    @include flex(center);
+    font-size: 1.25rem;
+    font-weight: 500;
+    img {
+      margin-right: 0.5em;
+      height: 4vh;
+    }
+  }
+  .nav {
+    padding: 0 3vw;
+    height: 12vh;
+    @include flex(space-between);
+    ul {
+      @include flex(center);
+      font-weight: 500;
+      // font-size: .9rem;
+
+      text-transform: capitalize;
+      li {
+        cursor: pointer;
+        margin-left: 1.5em;
+        padding: 0.75em 1.25em;
+        border-radius: 6px;
+        list-style: none;
+        a {
+          text-decoration: none;
+        }
+        &#dashboard-link {
+          background-color: #084fb8;
+          a {
+            color: white;
+          }
+        }
+        &:hover {
+          color: rgb(21, 21, 203);
+        }
+      }
+    }
+    // ul {
+    //     margin: 1em 1em 0 auto;
+    //     width: fit-content;
+    //     li {
+    //       width: fit-content;
+    //       border-radius: 6px;
+    //       padding: 0.75em 1em;
+    //       &#dashboard-link {
+    //         background-color: #084fb8;
+    //       }
+    //       a {
+    //         color: white;
+    //         text-decoration: none;
+    //         text-transform: capitalize;
+    //       }
+    //     }
+    //   }
+  }
+  .content {
+    height: 88vh;
+    width: 100%;
+    padding: 0 3vw;
+    display: flex;
+    justify-content: space-between;
+    .left {
+      position: relative;
+      width: 52.5%;
+      //   width: 62.5%;
+      //   height: 98%;
+      //   padding: 2em;
+      //   border-radius: 6px;
+      //   background-color: #c1d2fd;
+      z-index: 3;
+      h1 {
+        //   width: 85%;
+        margin: 0;
+        margin-top: 0.75em;
+        font-size: 3.25rem;
+        font-weight: 600;
+        letter-spacing: -2px;
+      }
+      p.desc {
+        font-size: 1.1rem;
+        margin: 1.5em 0;
+        width: 80%;
+      }
+      .buttons {
+        @include flex(left);
+        align-items: center;
+        button {
+          cursor: pointer;
+          @include flex(center);
+          margin-top: 1em;
+          font-weight: 500;
+          font-size: 1rem;
+          padding: 1em 1.75em;
+          border: none;
+          border-radius: 8px;
+          font-family: "Montserrat", sans-serif;
+        }
+        a {
+          text-decoration: none;
+        }
+        p {
+          font-weight: 600;
+        }
+        .left-btn {
+          button {
+            color: white;
+            background-color: #084fb8;
+          }
+        }
+        .right-btn {
+          margin-left: 2em;
+          button {
+            background-color: transparent;
+            border: 1px solid gray;
+          }
+        }
+      }
+    }
+    .right {
+      position: relative;
+      z-index: 3;
+      //   right: 3vw;
+      //   top: 50%;
+      //   transform: translate(0, -50%);
+      height: 98%;
+      width: 35%;
+      //   margin-right: 1em;
+      // background-color: #002239;
+      background-color: #011955;
+      border-radius: 6px;
+
+      img {
+        height: 90%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translate(-35%, 0%);
+      }
+    }
+  }
+}

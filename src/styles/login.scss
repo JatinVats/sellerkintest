@@ -1,0 +1,143 @@
+$color_1: #ffffff;
+$color_2: #e5e5e5;
+$color_3: #080710;
+$color_4: #eaf0fb;
+$font-family_1: "Poppins", sans-serif;
+$background-color_1: #080710;
+$background-color_2: rgb(255, 255, 255);
+$background-color_3: rgb(255, 255, 255);
+$background-color_4: #ffffff;
+$background-color_5: rgb(255, 255, 255);
+$background-color_6: rgb(255, 255, 255);
+
+* {
+  &:before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  &:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+.signup-body,
+.login-body {
+  background-color: #f8f8f8;
+  // position: relative;
+  height: 100vh;
+  width: 100vw;
+  #home-link {
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    text-decoration: none;
+  }
+  form {
+    // height: 520px;
+    // width: 30vw;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    // backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 3.5em 2em;
+
+    // font-family: "Poppins";
+    color: black;
+    // letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      text-align: center;
+      margin: 0;
+    }
+    p {
+      font-size: 0.9rem;
+      color: rgb(72, 72, 72);
+      text-align: center;
+    }
+    h2 + p {
+      margin: 0.5em 0 1.25em 0;
+    }
+  }
+  label {
+    display: block;
+    font-weight: 500;
+    margin-top: 1em;
+  }
+  input {
+    display: block;
+    width: 28vw;
+    background-color: $background-color_3;
+    border: 1px solid rgb(193, 193, 193);
+    border-radius: 3px;
+    padding: 0.75em 1em 0.75em 1em;
+    margin-top: 0.5em;
+    font-size: 0.9rem;
+    font-weight: 300;
+    &:focus {
+      outline: none;
+    }
+  }
+  #forgot-password-link {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    color: black;
+  }
+  ::placeholder {
+    color: gray;
+    // padding-left: 1em;
+  }
+  button {
+    align-self: center;
+    width: 30vw;
+    background-color: blue;
+    color: white;
+    margin-top: 2em;
+    margin-inline: auto;
+    padding: 0.75em 1em 0.75em 1em;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+  .signup-option {
+    text-align: center;
+    margin-top: 1em;
+  }
+  .social {
+    margin-top: 30px;
+    display: flex;
+    div {
+      background: red;
+      width: 150px;
+      border-radius: 3px;
+      padding: 5px 10px 10px 5px;
+      background-color: $background-color_5;
+      color: black;
+      text-align: center;
+      &:hover {
+        background-color: $background-color_6;
+      }
+    }
+    .fb {
+      margin-left: 25px;
+    }
+    i {
+      margin-right: 4px;
+    }
+  }
+}
