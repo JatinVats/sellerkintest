@@ -22,7 +22,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 app.use(cors());
-app.set("trust proxy", true);
+
 app.all("/application/**", async (req, res) => {
   try {
     const backendUrl = "https://sellerkintempbe.onrender.com";
