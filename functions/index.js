@@ -22,9 +22,10 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 app.use(cors());
+app.set("trust proxy", true);
 app.all("/application/**", async (req, res) => {
   try {
-    const backendUrl = "https://www.mybackend.com";
+    const backendUrl = "https://sellerkintempbe.onrender.com";
     // const backendUrl = "https://sellerkintempbe.onrender.com";
     const targetUrl = `${backendUrl}${req.originalUrl}`;
     const backendResponse = await fetch(targetUrl, {
