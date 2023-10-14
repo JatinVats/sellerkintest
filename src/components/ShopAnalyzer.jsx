@@ -15,6 +15,7 @@ import Navbar from "./Navbar";
 import Loader from "./Loader";
 
 const ShopAnalyzer = () => {
+  const backendURL="https://sellerkintempbe.onrender.com";
   const [searchTerm, setSearchTerm] = useState("");
   const [limit, setLimit] = useState(30);
   const [initialShopData, setInitialShopData] = useState({});
@@ -42,7 +43,7 @@ const ShopAnalyzer = () => {
       const creditUpdateResponse = await handleCredits(authUser.uid);
       if (creditUpdateResponse?.ok) {
         setIsLoading(true);
-        fetch(`/application/shops?shop_name=${searchTerm}`)
+        fetch(`${backendURL}/application/shops?shop_name=${searchTerm}`)
           .then((response) => response.json())
           .then((data) => {
             // console.log("frontend:", JSON.parse(data.body));
@@ -77,7 +78,7 @@ const ShopAnalyzer = () => {
           // stores all listing ids
           try {
             const response = await fetch(
-              `/application/shops/${initialShopData.shop_id}/listings/active?limit=100&offset=${offset}`
+              `${backendURL}/application/shops/${initialShopData.shop_id}/listings/active?limit=100&offset=${offset}`
             );
             const data = await response.json();
             const shopListings = JSON.parse(data.body).results;
@@ -115,7 +116,7 @@ const ShopAnalyzer = () => {
             // fetches 100 listings data at a time
             // console.log("aaa1:", listingIdString);
             const response = await fetch(
-              `/application/listings/getbatch/batch?listing_ids_string=x${listingIdString}x`
+              `${backendURL}/application/listings/getbatch/batch?listing_ids_string=x${listingIdString}x`
             );
             const data = await response.json();
             const listings = JSON.parse(data.body).results;
@@ -145,7 +146,7 @@ const ShopAnalyzer = () => {
 
       setViewsFavorers();
 
-      fetch(`/application/shops/${initialShopData.shop_id}/listings/featured`)
+      fetch(`${backendURL}/application/shops/${initialShopData.shop_id}/listings/featured`)
         .then((response) => response.json())
         .then((data) => {
           // setFeaturedListings([...JSON.parse(data.body).results]);
@@ -158,7 +159,7 @@ const ShopAnalyzer = () => {
               return new Promise((resolve) => {
                 setTimeout(async () => {
                   const response = await fetch(
-                    `/application/listings/${product.listing_id}/images`
+                    `${backendURL}/application/listings/${product.listing_id}/images`
                   );
                   const imageData = await response.json();
                   // console.log("images: ", JSON.parse(imageData.body));

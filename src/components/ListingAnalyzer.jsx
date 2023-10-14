@@ -13,6 +13,7 @@ import {
 import { handleCredits } from "../utils/handleCredits";
 
 const ListingAnalyzer = () => {
+  const backendURL="https://sellerkintempbe.onrender.com";
   const [searchTerm, setSearchTerm] = useState("");
   const [fixedSearchTerm, setFixedSearchTerm] = useState("");
   const [limit, setLimit] = useState(50);
@@ -95,7 +96,7 @@ const ListingAnalyzer = () => {
       const creditUpdateResponse = await handleCredits(authUser.uid);
       if (creditUpdateResponse?.ok) {
         setIsOverviewLoading(true);
-        fetch(`/application/listings/${listingId}`)
+        fetch(`${backendURL}/application/listings/${listingId}`)
           .then((response) => response.json())
           .then((data) => {
             setListingData((prevState) => ({
@@ -108,7 +109,7 @@ const ListingAnalyzer = () => {
             console.error("Error:", error);
           });
 
-        fetch(`/application/listings/${listingId}/images`)
+        fetch(`${backendURL}/application/listings/${listingId}/images`)
           .then((response) => response.json())
           .then((data) => {
             setListingData((prevState) => ({

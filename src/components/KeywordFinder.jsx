@@ -18,6 +18,7 @@ import "../styles/keywordFinder.css";
 import Table from "./Table";
 
 const KeywordFinder = () => {
+  const backendURL="https://sellerkintempbe.onrender.com";
   const [searchTerm, setSearchTerm] = useState("");
   const [fixedSearchTerm, setFixedSearchTerm] = useState("");
   const [limit, setLimit] = useState(50);
@@ -85,7 +86,7 @@ const KeywordFinder = () => {
 
         // fetch most recent {limit} number of listings
         fetch(
-          `/application/listings/active?keywords=${searchTerm}&limit=${limit}&sort_on=${sortOn}&offset=0&shop_location=${shopLocation}&taxonomy_id=${taxonomyId}&min_price=${maxPrice}&min_price=${maxPrice}`
+          `${backendURL}/application/listings/active?keywords=${searchTerm}&limit=${limit}&sort_on=${sortOn}&offset=0&shop_location=${shopLocation}&taxonomy_id=${taxonomyId}&min_price=${maxPrice}&min_price=${maxPrice}`
         )
           .then((response) => response.json())
           .then((data) => {
@@ -220,7 +221,7 @@ const KeywordFinder = () => {
           ) {
             try {
               const response = await fetch(
-                `/application/listings/active?keywords=${searchTerm}&limit=100&sort_on=${sortOn}&offset=${offset1}&shop_location=&taxonomy_id=&min_price=&min_price=`
+                `${backendURL}/application/listings/active?keywords=${searchTerm}&limit=100&sort_on=${sortOn}&offset=${offset1}&shop_location=&taxonomy_id=&min_price=&min_price=`
               );
               const data = await response.json();
               const listings = JSON.parse(data.body).results;
@@ -272,7 +273,7 @@ const KeywordFinder = () => {
             // console.log(listingIdString);
 
             const promise = fetch(
-              `/application/listings/getbatch/batch?listing_ids_string=x${listingIdString}x`
+              `${backendURL}/application/listings/getbatch/batch?listing_ids_string=x${listingIdString}x`
             )
               .then((response) => response.json())
               .then((data) => {
@@ -357,7 +358,7 @@ const KeywordFinder = () => {
             listingIdString += `listing_ids[]y${id}x`;
           });
           const response = await fetch(
-            `/application/listings/getbatch/batch?listing_ids_string=x${listingIdString}x`
+            `${backendURL}/application/listings/getbatch/batch?listing_ids_string=x${listingIdString}x`
           );
           const data = await response.json();
 
@@ -584,7 +585,7 @@ const [fetchedData, setFetchedData] = useState(null); // Store the fetched data
   const fetchData = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('/application/similarkeywords', {
+      const response = await fetch(`${backendURL}/application/similarkeywords`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

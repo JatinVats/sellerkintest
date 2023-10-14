@@ -17,6 +17,7 @@ import { handleCredits } from "../utils/handleCredits";
 import { countries } from "../utils/countries";
 
 const ProductFinder = (props) => {
+  const backendURL="https://sellerkintempbe.onrender.com";
   const [searchTerm, setSearchTerm] = useState("");
   const [fixedSearchTerm, setFixedSearchTerm] = useState("");
   const [limit, setLimit] = useState(50);
@@ -121,7 +122,7 @@ const ProductFinder = (props) => {
 
         // fetch most recent {limit} number of listings
         fetch(
-          `/application/listings/active?keywords=${searchTerm}&limit=${limit}&sort_on=${sortOn}&offset=0&shop_location=${selectedCountry}&taxonomy_id=${
+          `${backendURL}/application/listings/active?keywords=${searchTerm}&limit=${limit}&sort_on=${sortOn}&offset=0&shop_location=${selectedCountry}&taxonomy_id=${
             selectedLevel0
               ? selectedLevel0
               : selectedLevel1
@@ -169,7 +170,7 @@ const ProductFinder = (props) => {
             //   }&min_price=${minPrice}&min_price=${maxPrice}`
             // );
             const promise = fetch(
-              `/application/listings/active?keywords=${searchTerm}&limit=100&sort_on=${sortOn}&offset=${offset1}&shop_location=${selectedCountry}&taxonomy_id=${
+              `${backendURL}/application/listings/active?keywords=${searchTerm}&limit=100&sort_on=${sortOn}&offset=${offset1}&shop_location=${selectedCountry}&taxonomy_id=${
                 selectedLevel0
                   ? selectedLevel0
                   : selectedLevel1
@@ -223,7 +224,7 @@ const ProductFinder = (props) => {
             // console.log(listingIdString);
 
             const promise = fetch(
-              `/application/listings/getbatch/batch?listing_ids_string=x${listingIdString}x`
+              `${backendURL}/application/listings/getbatch/batch?listing_ids_string=x${listingIdString}x`
             )
               .then((response) => response.json())
               .then((data) => {
